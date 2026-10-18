@@ -1,51 +1,31 @@
-@media (min-width: 1699.98px) {
-
-}
-
-@media (max-width: 1599.98px) {
-
-}
-
-@media (max-width: 1499.98px) {
-
-}
-
-@media (max-width: 1399.98px) {
-
-}
-
-@media (max-width: 1199.98px) {
-
-
-}
-
-@media (max-width: 991.98px) {
-
-}
-
 @media (max-width: 767.98px) {
     body {
-        padding-left: 5px !important;
-        padding-right: 5px !important;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+
+    h1 {
+        font-size: 18px !important;
+        padding: 14px 12px !important;
+    }
+
+    article {
+        padding: 8px 12px !important;
+        font-size: 12px !important;
+        flex-wrap: wrap !important;
     }
 
     .control-panel {
-        padding-left: 10px !important;
-        padding-right: 10px !important;
+        padding: 14px !important;
     }
 
     .preview-panel {
-        padding-left: 10px !important;
-        padding-right: 10px !important;
+        padding: 14px !important;
     }
 
+    .step-container {
+        padding: 14px !important;
+    }
 }
-
-@media (max-width: 675.98px) {
-
-}
-
-@media (max-width: 575.98px) {
-
-}
-
