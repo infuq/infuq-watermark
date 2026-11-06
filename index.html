@@ -1,16 +1,36 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
-    <!-- 谷歌广告 -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6396979438479066" crossorigin="anonymous"></script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="keywords" content="十行 安全 图片水印离线工具" />
-    <meta name="description" content="十行 安全 图片水印离线工具" />
-    <title>图片水印离线工具</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <title>图片水印在线工具 | 免费批量加文字水印, 本地处理不上传</title>
+    <meta name="description" content="免费图片水印工具, 在浏览器本地批量处理, 图片不上传服务器, 隐私安全. 支持自定义水印文字, 字体, 颜色, 透明度, 倾斜角度与交错平铺, 可一次为多张照片加水印并导出 PNG, JPG, WebP.">
+    <meta name="keywords" content="图片水印,图片加水印,水印工具,批量加水印,文字水印,照片水印,在线水印,离线水印,免费水印,身份证加水印">
+    <link rel="canonical" href="https://wm.infuq.com/">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="十行">
+    <meta name="theme-color" content="#409eff">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/favicon.ico">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="十行图片水印">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:url" content="https://wm.infuq.com/">
+    <meta property="og:title" content="图片水印在线工具 | 免费批量加文字水印, 本地处理不上传">
+    <meta property="og:description" content="浏览器本地批量给图片加水印, 图片不上传服务器. 可调文字, 字体, 颜色, 透明度, 倾斜角度与间距, 导出 PNG/JPG/WebP.">
+    <meta property="og:image" content="https://wm.infuq.com/images/watermark-tool-ui.png">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="800">
+    <meta property="og:image:alt" content="图片水印工具的批量加水印效果预览界面">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="图片水印在线工具 | 免费批量加文字水印">
+    <meta name="twitter:description" content="浏览器本地批量给图片加水印, 图片不上传服务器, 支持 PNG/JPG/WebP 导出.">
+    <meta name="twitter:image" content="https://wm.infuq.com/images/watermark-tool-ui.png">
+
+    <!-- 谷歌广告 -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6396979438479066" crossorigin="anonymous"></script>
     <link href="./mobile.css" rel="stylesheet">
     <style>
         :root {
@@ -808,6 +828,105 @@
             color: #c0c4cc;
         }
 
+        .seo-content {
+            max-width: 1600px;
+            margin: 24px auto 0;
+            background: #fff;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 6px 30px 24px;
+        }
+
+        .seo-block {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .seo-block:last-child {
+            border-bottom: none;
+        }
+
+        .seo-content h2 {
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--dark-text);
+            margin-bottom: 12px;
+        }
+
+        .seo-content h3 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--dark-text);
+            margin-bottom: 6px;
+        }
+
+        .seo-content p,
+        .seo-content li {
+            font-size: 13px;
+            color: #5a5e66;
+            line-height: 1.8;
+        }
+
+        .seo-content p + p {
+            margin-top: 8px;
+        }
+
+        .seo-content ul,
+        .seo-content ol {
+            padding-left: 22px;
+        }
+
+        .seo-content li + li {
+            margin-top: 6px;
+        }
+
+        .seo-content .screenshot {
+            display: block;
+            width: 100%;
+            max-width: 960px;
+            height: auto;
+            margin-top: 16px;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+        }
+
+        .feature-item {
+            background: var(--light-bg);
+            border-radius: var(--radius);
+            padding: 14px 16px;
+        }
+
+        .faq-item {
+            padding: 12px 0;
+            border-bottom: 1px dashed var(--border-light);
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            .seo-content {
+                margin-top: 16px;
+                padding: 4px 16px 18px;
+            }
+
+            .seo-content h2 {
+                font-size: 16px;
+            }
+
+            .seo-block {
+                padding: 16px 0;
+            }
+        }
+
         @media (max-width: 1024px) {
             .main-content {
                 flex-direction: column;
@@ -953,14 +1072,122 @@
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "WebPage",
-            "url": "https://watermark.infuq.com/",
-            "publisher": {
-                "@type": "Person",
-                "name": "十行-图片水印离线工具",
-                "url": "https://watermark.infuq.com/",
-                "logo": "https://watermark.infuq.com/favicon.png"
-            }
+            "@graph": [
+                {
+                    "@type": "WebApplication",
+                    "@id": "https://wm.infuq.com/#app",
+                    "name": "图片水印离线工具",
+                    "alternateName": "十行图片水印工具",
+                    "url": "https://wm.infuq.com/",
+                    "description":"在浏览器本地为图片批量添加文字水印的免费工具, 图片不会上传到服务器, 支持自定义水印文字, 字体, 颜色, 透明度, 倾斜角度, 间距与交错平铺, 可导出 PNG, JPG, WebP.",
+                    "applicationCategory": "MultimediaApplication",
+                    "operatingSystem":"Windows, macOS, Android, iOS(现代浏览器)",
+                    "browserRequirements": "需要支持 JavaScript 与 Canvas 的现代浏览器",
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "0",
+                        "priceCurrency": "CNY"
+                    },
+                    "featureList": [
+                        "图片不上传, 全程浏览器本地处理",
+                        "一次选择多张图片批量加水印",
+                        "自定义水印文字, 颜色, 字体, 加粗与斜体",
+                        "交错平铺整张图片",
+                        "调节不透明度, 字号比例, 旋转角度与左右上下间距",
+                        "导出 PNG, JPG, WebP 并可设置图像质量",
+                        "手机端响应式布局"
+                    ],
+                    "screenshot": {
+                        "@type": "ImageObject",
+                        "url": "https://wm.infuq.com/images/watermark-tool-ui.png",
+                        "caption": "图片水印工具的批量加水印效果预览界面"
+                    },
+                    "image": [
+                        {
+                            "@type": "ImageObject",
+                            "contentUrl": "https://wm.infuq.com/images/watermark-effect-preview.png",
+                            "url": "https://wm.infuq.com/images/watermark-effect-preview.png",
+                            "width": 1190,
+                            "height": 402,
+                            "caption": "证件照片批量添加交错平铺的社保专用文字水印效果",
+                            "inLanguage": "zh-CN"
+                        },
+                        {
+                            "@type": "ImageObject",
+                            "contentUrl": "https://wm.infuq.com/images/watermark-tool-ui.png",
+                            "url": "https://wm.infuq.com/images/watermark-tool-ui.png",
+                            "width": 1280,
+                            "height": 800,
+                            "caption": "图片水印工具批量给多张图片加文字水印的界面",
+                            "inLanguage": "zh-CN"
+                        }
+                    ],
+                    "creator": {
+                        "@type": "Person",
+                        "name": "十行",
+                        "url": "https://wm.infuq.com/"
+                    },
+                    "publisher": {
+                        "@type": "Person",
+                        "name": "十行",
+                        "url": "https://wm.infuq.com/"
+                    }
+                },
+                {
+                    "@type": "FAQPage",
+                    "@id": "https://wm.infuq.com/#faq",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name":"图片水印工具需要上传图片到服务器吗?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text":"不需要. 所有加水印操作都在浏览器本地完成, 图片不会上传到服务器, 断网状态下也能正常使用."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name":"可以批量给多张图片加水印吗?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text":"可以. 一次选择多张图片后, 水印文字与样式会同步应用到全部图片, 点击\"下载全部图片\"即可批量导出."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name":"支持哪些图片格式?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text":"支持 PNG, JPG, WebP 等常见格式导入, 导出时同样可以选择 PNG, JPG 或 WebP, 其中 JPG 与 WebP 还可以调整图像质量."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name":"水印文字可以平铺整张图片吗?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text":"可以. 勾选\"交错排列\"后水印会以倾斜角度铺满整张图, 并可自由调整不透明度, 字号比例, 旋转角度以及左右间隔, 上下间隔."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name":"手机上可以使用这个水印工具吗?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text":"可以. 页面采用响应式布局, 手机上同样能选择图片, 调整水印样式并下载加水印后的图片."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name":"这个图片水印工具收费吗?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text":"免费使用, 不需要注册登录, 也不限制图片数量和使用次数."
+                            }
+                        }
+                    ]
+                }
+            ]
         }
     </script>
 
@@ -984,7 +1211,7 @@
                 </div>
                 <div class="control-group">
                     <input type="file" id="image" autocomplete="off" multiple>
-                    <div class="hint">支持PNG/JPG/WebP等格式，可一次选择多张图片</div>
+                    <div class="hint">支持PNG/JPG/WebP等格式, 可一次选择多张图片</div>
                 </div>
             </div>
 
@@ -1091,7 +1318,7 @@
             <div id="graph">
                 <div class="empty-preview" id="empty-preview">
                     <p>暂无图片</p>
-                    <span>从左侧选择本地图片后，加水印的效果会实时显示在这里</span>
+                    <span>从左侧选择本地图片后, 加水印的效果会实时显示在这里</span>
                 </div>
             </div>
 
@@ -1135,6 +1362,95 @@
 
 </div>
 
+<main class="seo-content">
+    <section class="seo-block">
+        <h2>图片水印工具: 不上传服务器的批量加水印方案</h2>
+        <p>十行图片水印工具是一个纯网页版的图片加水印工具. 图片在浏览器本地读取和绘制, 不发起上传请求, 也不需要注册登录. 给身份证, 银行卡, 合同, 房产资料等敏感照片加"仅供办理XX使用"这类防盗用水印时, 可以避免照片先经过一台陌生服务器.</p>
+        <p>打开页面即可使用: 选择一张或多张图片, 输入水印文字, 调整样式, 右侧预览区实时显示效果, 确认后批量下载. 整个流程在同一页面内完成, 不限图片数量与使用次数.</p>
+        <img class="screenshot" src="./images/watermark-effect-preview.png" width="1190" height="402"
+             alt="证件照片批量添加交错平铺的社保专用文字水印效果">
+    </section>
+
+    <section class="seo-block">
+        <h2>功能特点</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <h3>本地处理, 保护隐私</h3>
+                <p>加水印全程在浏览器内完成, 图片不会上传到服务器, 断网也能正常使用.</p>
+            </div>
+            <div class="feature-item">
+                <h3>批量给多张图片加水印</h3>
+                <p>一次选择多张图片, 水印文字与样式同步应用, 点击"下载全部图片"批量导出.</p>
+            </div>
+            <div class="feature-item">
+                <h3>交错平铺整张图片</h3>
+                <p>勾选"交错排列"后水印按倾斜角度铺满全图, 比单角水印更难被裁掉.</p>
+            </div>
+            <div class="feature-item">
+                <h3>水印样式自由调整</h3>
+                <p>可设置文字内容, 颜色, 字体, 加粗, 斜体, 以及不透明度, 字号比例, 旋转角度和左右, 上下间隔.</p>
+            </div>
+            <div class="feature-item">
+                <h3>导出 PNG / JPG / WebP</h3>
+                <p>三种常见格式可选, JPG 与 WebP 支持调节图像质量, 兼顾清晰度和文件体积.</p>
+            </div>
+            <div class="feature-item">
+                <h3>手机端可用</h3>
+                <p>响应式布局, 手机上控制面板与预览区上下排列, 同样可以完成加水印和下载.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="seo-block">
+        <h2>常见使用场景</h2>
+        <ul>
+            <li>提交身份证, 银行卡, 毕业证等证件照片时, 加上"仅供办理某业务使用", 降低照片被盗用的风险.</li>
+            <li>设计师, 摄影师发送样图或初稿时铺满水印, 避免未定稿图片被直接取用.</li>
+            <li>房产, 租房, 合同等文件截图发给中介或对方前先加水印.</li>
+            <li>二手交易发布实物图时加上用户名, 防止图片被搬运.</li>
+            <li>企业内部截图, 报表图片加水印后对外发送.</li>
+        </ul>
+    </section>
+
+    <section class="seo-block">
+        <h2>使用方法</h2>
+        <ol>
+            <li>选择图片: 点击"选择文件", 支持 PNG / JPG / WebP 等格式, 可一次选择多张图片.</li>
+            <li>设置水印文字: 输入需要显示的内容, 例如"社保专用""仅供参考"或自定义署名.</li>
+            <li>调整水印样式: 按需修改颜色, 字体, 不透明度, 字号比例, 旋转角度与排列间隔, 预览区实时更新.</li>
+            <li>下载图片: 通过"设置格式"选择导出格式与图像质量, 再点击"下载全部图片"保存结果.</li>
+        </ol>
+    </section>
+
+    <section class="seo-block" id="faq">
+        <h2>常见问题</h2>
+        <div class="faq-item">
+            <h3>图片水印工具需要上传图片到服务器吗?</h3>
+            <p>不需要. 所有加水印操作都在浏览器本地完成, 图片不会上传到服务器, 断网状态下也能正常使用.</p>
+        </div>
+        <div class="faq-item">
+            <h3>可以批量给多张图片加水印吗?</h3>
+            <p>可以. 一次选择多张图片后, 水印文字与样式会同步应用到全部图片, 点击"下载全部图片"即可批量导出.</p>
+        </div>
+        <div class="faq-item">
+            <h3>支持哪些图片格式?</h3>
+            <p>支持 PNG, JPG, WebP 等常见格式导入, 导出时同样可以选择 PNG, JPG 或 WebP, 其中 JPG 与 WebP 还可以调整图像质量.</p>
+        </div>
+        <div class="faq-item">
+            <h3>水印文字可以平铺整张图片吗?</h3>
+            <p>可以. 勾选"交错排列"后水印会以倾斜角度铺满整张图, 并可自由调整不透明度, 字号比例, 旋转角度以及左右间隔, 上下间隔.</p>
+        </div>
+        <div class="faq-item">
+            <h3>手机上可以使用这个水印工具吗?</h3>
+            <p>可以. 页面采用响应式布局, 手机上同样能选择图片, 调整水印样式并下载加水印后的图片.</p>
+        </div>
+        <div class="faq-item">
+            <h3>这个图片水印工具收费吗?</h3>
+            <p>免费使用, 不需要注册登录, 也不限制图片数量和使用次数.</p>
+        </div>
+    </section>
+</main>
+
 <div class="img-modal" id="img-modal" style="display: none">
     <div class="img-modal-body">
         <img id="img-modal-img" alt="放大预览">
@@ -1145,7 +1461,7 @@
 <div class="confirm-modal" id="confirm-clear-modal" style="display: none">
     <div class="confirm-box">
         <div class="confirm-title">清空确认</div>
-        <div class="confirm-text">确定要清空全部图片吗？清空后需要重新选择图片。</div>
+        <div class="confirm-text">确定要清空全部图片吗? 清空后需要重新选择图片.</div>
         <div class="confirm-actions">
             <button type="button" class="btn-outline" id="confirm-clear-cancel">取消</button>
             <button type="button" class="btn-danger" id="confirm-clear-ok">确定</button>
@@ -1218,7 +1534,7 @@
     
     const downloadAllPic = async () => {
         if (allCanvas.length === 0) {
-            alert("请先选择图片！");
+            alert("请先选择图片!");
             return;
         }
         
@@ -1604,132 +1920,222 @@
         }
         
         // 示例身份证绘制工具
+        // 版式参照现行第二代居民身份证: 85.6mm x 54mm, 按 10px/mm 绘制为 856 x 540
+        // 人像面: 照片居左, 登记项目右列, 公民身份号码居底
+        // 国徽面: 国徽左上, 证件名称右上两行同宽, 长城图案居中下, 签发机关与有效期限最下方
+        const ID_W = 856, ID_H = 540, ID_R = 30;
+        const idRoundRect = (ctx, x, y, w, h, r) => {
+            ctx.beginPath();
+            ctx.moveTo(x + r, y);
+            ctx.arcTo(x + w, y, x + w, y + h, r);
+            ctx.arcTo(x + w, y + h, x, y + h, r);
+            ctx.arcTo(x, y + h, x, y, r);
+            ctx.arcTo(x, y, x + w, y, r);
+            ctx.closePath();
+        };
+        const idBase = (ctx) => {
+            // 白色衬底 + 圆角卡面, 导出 JPEG 时不会出现透明黑角
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, 0, ID_W, ID_H);
+            ctx.save();
+            idRoundRect(ctx, 0, 0, ID_W, ID_H, ID_R);
+            ctx.clip();
+            // 彩虹扭索底纹: 浅蓝 -> 粉红 -> 浅蓝
+            const g = ctx.createLinearGradient(0, 0, ID_W, ID_H);
+            g.addColorStop(0, '#eaf3fb');
+            g.addColorStop(0.5, '#f6eef2');
+            g.addColorStop(1, '#ebf4f9');
+            ctx.fillStyle = g;
+            ctx.fillRect(0, 0, ID_W, ID_H);
+            // 两组相位相反的细曲线交织成扭索网格
+            ctx.lineWidth = 1;
+            for (let i = 0; i < 44; i++) {
+                const y = -16 + i * 13;
+                const tone = i % 3 === 0 ? 'rgba(120, 176, 229, 0.18)'
+                    : i % 3 === 1 ? 'rgba(216, 158, 178, 0.13)' : 'rgba(94, 194, 169, 0.13)';
+                ctx.strokeStyle = tone;
+                for (let dir = 0; dir < 2; dir++) {
+                    ctx.beginPath();
+                    for (let x = 0; x <= ID_W; x += 8) {
+                        const yy = y + 9 * Math.sin((x / ID_W) * Math.PI * 3 + i * 0.35 * (dir ? -1 : 1));
+                        ctx[x === 0 ? 'moveTo' : 'lineTo'](x, yy);
+                    }
+                    ctx.stroke();
+                }
+            }
+            ctx.restore();
+            ctx.strokeStyle = 'rgba(120, 140, 150, 0.45)';
+            ctx.lineWidth = 1.5;
+            idRoundRect(ctx, 0.75, 0.75, ID_W - 1.5, ID_H - 1.5, ID_R);
+            ctx.stroke();
+        };
         const idLabel = (ctx, t, x, y) => {
-            ctx.fillStyle = '#41806b';
-            ctx.font = '15px "Microsoft YaHei", sans-serif';
+            ctx.fillStyle = '#3d7a68';
+            ctx.font = '22px "Microsoft YaHei", sans-serif';
             ctx.fillText(t, x, y);
         };
-        const idValue = (ctx, t, x, y) => {
+        const idValue = (ctx, t, x, y, size) => {
             ctx.fillStyle = '#26333d';
-            ctx.font = '17px "Microsoft YaHei", sans-serif';
+            ctx.font = (size || 26) + 'px "Microsoft YaHei", sans-serif';
             ctx.fillText(t, x, y);
         };
-        const idTexture = (ctx, blobs) => {
-            blobs.forEach(([x, y, r, c]) => {
-                const g = ctx.createRadialGradient(x, y, 0, x, y, r);
-                g.addColorStop(0, c);
-                g.addColorStop(1, 'rgba(255,255,255,0)');
-                ctx.fillStyle = g;
-                ctx.fillRect(0, 0, 640, 400);
-            });
+        const idNumber = (ctx, t, x, y) => {
+            ctx.fillStyle = '#1f2c36';
+            ctx.font = 'bold 40px "Courier New", monospace';
+            // 逐字加字距, 贴近卡面号码排版
+            let cx = x;
+            for (const ch of t) {
+                ctx.fillText(ch, cx, y);
+                cx += ctx.measureText(ch).width + 4;
+            }
         };
         const idMark = (ctx) => {
-            ctx.fillStyle = 'rgba(88, 112, 104, 0.5)';
-            ctx.font = '12px "Microsoft YaHei", sans-serif';
-            ctx.fillText('示例图片，仅供水印功能演示', 452, 382);
+            ctx.fillStyle = 'rgba(88, 112, 104, 0.6)';
+            ctx.font = '18px "Microsoft YaHei", sans-serif';
+            ctx.fillText('示例图片, 仅供水印功能演示', ID_W - 244, ID_H - 20);
         };
-
-        // 示例图片1：张三身份证正面（人像面，照片与号码均为虚构占位）
-        const drawIdFront = () => {
-            const canvas = document.createElement('canvas');
-            canvas.width = 640;
-            canvas.height = 400;
-            const ctx = canvas.getContext('2d');
-
-            ctx.fillStyle = '#f3f8f6';
-            ctx.fillRect(0, 0, 640, 400);
-            idTexture(ctx, [
-                [90, 340, 160, 'rgba(94, 194, 169, 0.16)'],
-                [560, 50, 140, 'rgba(120, 176, 229, 0.18)'],
-                [430, 390, 130, 'rgba(240, 186, 130, 0.12)']
-            ]);
-
-            const px = 36, py = 88, pw = 106, ph = 142;
-            ctx.fillStyle = '#ddebe6';
-            ctx.fillRect(px, py, pw, ph);
-            ctx.strokeStyle = '#9fbcb2';
-            ctx.lineWidth = 1.5;
-            ctx.strokeRect(px, py, pw, ph);
-            ctx.fillStyle = '#abc6bd';
+        const idEmblem = (ctx, cx, cy, s) => {
+            // 简化国徽图案(示意, 非精确复刻)
+            ctx.save();
+            ctx.translate(cx, cy);
+            ctx.scale(s, s);
+            ctx.strokeStyle = '#c9a04e';
+            ctx.fillStyle = '#c9a04e';
+            ctx.lineWidth = 3;
             ctx.beginPath();
-            ctx.arc(px + pw / 2, py + 50, 27, 0, Math.PI * 2);
-            ctx.fill();
+            ctx.arc(0, 10, 46, Math.PI * 1.12, Math.PI * 1.88);
+            ctx.stroke();
             ctx.beginPath();
-            ctx.moveTo(px + pw / 2 - 40, py + ph);
-            ctx.quadraticCurveTo(px + pw / 2, py + 84, px + pw / 2 + 40, py + ph);
+            ctx.arc(0, 10, 46, Math.PI * 0.12, Math.PI * 0.88);
+            ctx.stroke();
+            for (let k = -3; k <= 3; k++) {
+                ctx.beginPath();
+                ctx.arc(k * 14, 52, 3.5, 0, Math.PI * 2);
+                ctx.fill();
+            }
+            ctx.fillStyle = '#d24735';
+            // 天安门: 重檐 + 城身
+            ctx.beginPath();
+            ctx.moveTo(-30, 18);
+            ctx.quadraticCurveTo(0, 6, 30, 18);
+            ctx.lineTo(26, 25);
+            ctx.lineTo(-26, 25);
             ctx.closePath();
             ctx.fill();
+            ctx.fillRect(-24, 27, 48, 12);
+            ctx.beginPath();
+            for (let i = 0; i < 10; i++) {
+                const ang = -Math.PI / 2 + i * Math.PI / 5;
+                const rad = i % 2 === 0 ? 22 : 9;
+                ctx[i === 0 ? 'moveTo' : 'lineTo'](rad * Math.cos(ang), -8 + rad * Math.sin(ang));
+            }
+            ctx.closePath();
+            ctx.fill();
+            ctx.restore();
+        };
+        const idWall = (ctx) => {
+            // 简化长城剪影: 远山 + 逐级抬升的城墙垛口 + 右端烽火台
+            ctx.save();
+            ctx.globalAlpha = 0.24;
+            ctx.fillStyle = '#7ba3bd';
+            ctx.beginPath();
+            ctx.moveTo(110, 430);
+            ctx.quadraticCurveTo(210, 336, 300, 396);
+            ctx.quadraticCurveTo(400, 320, 500, 392);
+            ctx.quadraticCurveTo(610, 330, 746, 400);
+            ctx.lineTo(746, 430);
+            ctx.closePath();
+            ctx.fill();
+            ctx.fillStyle = '#4f7f96';
+            const x0 = 110, segW = 128, base = 430;
+            for (let seg = 0; seg < 5; seg++) {
+                const top = 402 - seg * 18;
+                ctx.fillRect(x0 + seg * segW, top, segW + 6, base - top);
+                for (let k = 0; k < 4; k++) {
+                    ctx.fillRect(x0 + seg * segW + k * 34 + 6, top - 14, 20, 14);
+                }
+            }
+            // 烽火台
+            ctx.fillRect(672, 292, 74, 46);
+            for (let k = 0; k < 3; k++) {
+                ctx.fillRect(676 + k * 26, 278, 18, 14);
+            }
+            ctx.restore();
+        };
 
-            idLabel(ctx, '姓名', 170, 106);
-            idValue(ctx, '张三', 212, 106);
-            idLabel(ctx, '性别', 170, 146);
-            idValue(ctx, '男', 212, 146);
-            idLabel(ctx, '民族', 310, 146);
-            idValue(ctx, '汉', 352, 146);
-            idLabel(ctx, '出生', 170, 186);
-            idValue(ctx, '1990年1月1日', 212, 186);
-            idLabel(ctx, '住址', 170, 226);
-            idValue(ctx, '北京市东城区示例路1号', 212, 226);
+        // 示例图片1: 张三身份证人像面(照片为剪影, 号码为虚构占位)
+        const drawIdFront = () => {
+            const canvas = document.createElement('canvas');
+            canvas.width = ID_W;
+            canvas.height = ID_H;
+            const ctx = canvas.getContext('2d');
+            idBase(ctx);
 
-            idLabel(ctx, '公民身份号码', 170, 298);
-            ctx.fillStyle = '#26333d';
-            ctx.font = 'bold 21px "Courier New", monospace';
-            ctx.fillText('110101199001011234', 212, 330);
+            // 证件照片: 剪影占位, 不使用真实人像
+            const px = 78, py = 96, pw = 250, ph = 306;
+            ctx.fillStyle = '#dfeae6';
+            ctx.fillRect(px, py, pw, ph);
+            ctx.save();
+            ctx.beginPath();
+            ctx.rect(px, py, pw, ph);
+            ctx.clip();
+            ctx.fillStyle = '#b3ccc3';
+            ctx.beginPath();
+            ctx.arc(px + pw / 2, py + 108, 62, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.beginPath();
+            ctx.moveTo(px + pw / 2 - 96, py + ph);
+            ctx.quadraticCurveTo(px + pw / 2, py + 196, px + pw / 2 + 96, py + ph);
+            ctx.closePath();
+            ctx.fill();
+            ctx.restore();
+            ctx.strokeStyle = '#a8c3ba';
+            ctx.lineWidth = 2;
+            ctx.strokeRect(px, py, pw, ph);
+
+            idLabel(ctx, '姓名', 372, 150);
+            idValue(ctx, '张三', 448, 150);
+            idLabel(ctx, '性别', 372, 210);
+            idValue(ctx, '男', 448, 210);
+            idLabel(ctx, '民族', 566, 210);
+            idValue(ctx, '汉', 642, 210);
+            idLabel(ctx, '出生', 372, 270);
+            idValue(ctx, '1990年1月1日', 448, 270);
+            idLabel(ctx, '住址', 372, 330);
+            idValue(ctx, '北京市东城区', 448, 330);
+            idValue(ctx, '示例路1号', 448, 378);
+
+            // 公民身份号码: 校验位故意无效, 不能当真实证件使用
+            idLabel(ctx, '公民身份号码', 78, 472);
+            idNumber(ctx, '110101199001011234', 240, 476);
             idMark(ctx);
 
             return canvas.toDataURL('image/png');
         };
 
-        // 示例图片2：张三身份证反面（国徽面）
+        // 示例图片2: 张三身份证国徽面
         const drawIdBack = () => {
             const canvas = document.createElement('canvas');
-            canvas.width = 640;
-            canvas.height = 400;
+            canvas.width = ID_W;
+            canvas.height = ID_H;
             const ctx = canvas.getContext('2d');
+            idBase(ctx);
 
-            ctx.fillStyle = '#eef6f2';
-            ctx.fillRect(0, 0, 640, 400);
-            idTexture(ctx, [
-                [600, 350, 170, 'rgba(94, 194, 169, 0.15)'],
-                [60, 60, 150, 'rgba(120, 176, 229, 0.16)']
-            ]);
+            idEmblem(ctx, 152, 152, 1.5);
 
-            const cx = 320, cy = 104;
-            ctx.strokeStyle = '#c9a04e';
-            ctx.fillStyle = '#c9a04e';
-            ctx.lineWidth = 3;
-            ctx.beginPath();
-            ctx.arc(cx, cy + 10, 46, Math.PI * 1.12, Math.PI * 1.88);
-            ctx.stroke();
-            ctx.beginPath();
-            ctx.arc(cx, cy + 10, 46, Math.PI * 0.12, Math.PI * 0.88);
-            ctx.stroke();
-            for (let k = -3; k <= 3; k++) {
-                ctx.beginPath();
-                ctx.arc(cx + k * 14, cy + 52, 3.5, 0, Math.PI * 2);
-                ctx.fill();
-            }
-            ctx.fillStyle = '#d24735';
-            ctx.fillRect(cx - 26, cy + 20, 52, 10);
-            ctx.beginPath();
-            for (let i = 0; i < 10; i++) {
-                const ang = -Math.PI / 2 + i * Math.PI / 5;
-                const rad = i % 2 === 0 ? 22 : 9;
-                ctx[i === 0 ? 'moveTo' : 'lineTo'](cx + rad * Math.cos(ang), cy - 8 + rad * Math.sin(ang));
-            }
-            ctx.closePath();
-            ctx.fill();
+            // 证件名称: 7字与5字两行同宽, 与卡面排版一致
+            ctx.fillStyle = '#2b3a45';
+            ctx.font = 'bold 42px "SimHei", "Microsoft YaHei", sans-serif';
+            ctx.fillText('中华人民共和国', 320, 132);
+            ctx.font = 'bold 58px "SimHei", "Microsoft YaHei", sans-serif';
+            ctx.fillText('居民身份证', 320, 204);
 
-            ctx.fillStyle = '#333a40';
-            ctx.font = 'bold 27px "SimHei", "Microsoft YaHei", sans-serif';
-            ctx.textAlign = 'center';
-            ctx.fillText('中华人民共和国居民身份证', 320, 210);
-            ctx.textAlign = 'left';
+            idWall(ctx);
 
-            idLabel(ctx, '签发机关', 170, 286);
-            idValue(ctx, '北京市公安局东城分局', 254, 286);
-            idLabel(ctx, '有效期限', 170, 320);
-            idValue(ctx, '2015.01.01-2035.01.01', 254, 320);
+            idLabel(ctx, '签发机关', 120, 466);
+            idValue(ctx, '北京市公安局东城分局', 240, 466);
+            idLabel(ctx, '有效期限', 120, 508);
+            idValue(ctx, '2015.01.01-2035.01.01', 240, 508);
             idMark(ctx);
 
             return canvas.toDataURL('image/png');
@@ -1753,8 +2159,8 @@
         };
         
         // 创建示例文件
-        const file1 = dataUrlToFile(exampleImage1, "张三-身份证正面.png");
-        const file2 = dataUrlToFile(exampleImage2, "张三-身份证反面.png");
+        const file1 = dataUrlToFile(exampleImage1, "张三-身份证人像面.png");
+        const file2 = dataUrlToFile(exampleImage2, "张三-身份证国徽面.png");
         
         // 模拟选择示例文件
         setTimeout(() => {

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    <url>
+        <loc>https://wm.infuq.com/</loc>
+        <lastmod>2026-11-06T00:00:00+08:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://wm.infuq.com/images/watermark-effect-preview.png</image:loc>
+            <image:title>证件照片批量添加交错平铺的社保专用文字水印效果</image:title>
+            <image:caption>身份证正反面照片在浏览器本地批量添加倾斜平铺水印的效果示例.</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://wm.infuq.com/images/watermark-tool-ui.png</image:loc>
+            <image:title>图片水印工具批量加水印界面</image:title>
+            <image:caption>图片水印工具的本地批量加水印与实时预览界面.</image:caption>
+        </image:image>
+    </url>
+</urlset>
