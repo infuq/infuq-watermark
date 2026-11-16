@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
-    <title>图片水印在线工具 | 免费批量加文字水印, 本地处理不上传</title>
+    <title>图片水印离线工具 | 免费批量加文字水印, 本地处理不上传</title>
     <meta name="description" content="免费图片水印工具, 在浏览器本地批量处理, 图片不上传服务器, 隐私安全. 支持自定义水印文字, 字体, 颜色, 透明度, 倾斜角度与交错平铺, 可一次为多张照片加水印并导出 PNG, JPG, WebP.">
     <meta name="keywords" content="图片水印,图片加水印,水印工具,批量加水印,文字水印,照片水印,在线水印,离线水印,免费水印,身份证加水印">
     <link rel="canonical" href="https://wm.infuq.com/">
@@ -18,19 +18,20 @@
     <meta property="og:site_name" content="十行图片水印">
     <meta property="og:locale" content="zh_CN">
     <meta property="og:url" content="https://wm.infuq.com/">
-    <meta property="og:title" content="图片水印在线工具 | 免费批量加文字水印, 本地处理不上传">
+    <meta property="og:title" content="图片水印离线工具 | 免费批量加文字水印, 本地处理不上传">
     <meta property="og:description" content="浏览器本地批量给图片加水印, 图片不上传服务器. 可调文字, 字体, 颜色, 透明度, 倾斜角度与间距, 导出 PNG/JPG/WebP.">
     <meta property="og:image" content="https://wm.infuq.com/images/watermark-tool-ui.png">
     <meta property="og:image:width" content="1280">
     <meta property="og:image:height" content="800">
     <meta property="og:image:alt" content="图片水印工具的批量加水印效果预览界面">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="图片水印在线工具 | 免费批量加文字水印">
+    <meta name="twitter:title" content="图片水印离线工具 | 免费批量加文字水印">
     <meta name="twitter:description" content="浏览器本地批量给图片加水印, 图片不上传服务器, 支持 PNG/JPG/WebP 导出.">
     <meta name="twitter:image" content="https://wm.infuq.com/images/watermark-tool-ui.png">
 
     <!-- 谷歌广告 -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6396979438479066" crossorigin="anonymous"></script>
+    <meta name="google-adsense-account" content="ca-pub-6396979438479066">
     <link href="./mobile.css" rel="stylesheet">
     <style>
         :root {
@@ -60,7 +61,7 @@
         }
 
         body {
-            background: #f0f2f5;
+            background: #fff;
             color: var(--dark-text);
             line-height: 1.6;
             min-height: 100vh;
@@ -78,6 +79,7 @@
             display: flex;
             flex-direction: column;
             height: calc(100vh - 40px);
+            height: calc(100dvh - 40px);
         }
 
         h1 {
@@ -106,24 +108,26 @@
         .main-content {
             display: flex;
             flex: 1;
+            padding: 20px 0;
             overflow: hidden;
         }
 
         .control-panel {
             flex: 0 0 480px;
             background-color: var(--light-bg);
-            padding: 20px;
-            overflow-y: auto;
+            padding: 28px;
             border-right: 1px solid var(--border-light);
+            overflow-y: auto;
         }
 
         .control-panel > *:last-child {
             margin-bottom: 0;
         }
 
+        /* 与左列同值: 两列内容顶部要对齐, 只改一边会错开 8px */
         .preview-panel {
             flex: 1;
-            padding: 20px;
+            padding: 28px;
             background-color: var(--light-bg);
             display: flex;
             flex-direction: column;
@@ -146,21 +150,6 @@
             font-weight: 600;
             color: var(--dark-text);
             margin-bottom: 16px;
-        }
-
-        .step-number {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 24px;
-            height: 24px;
-            padding-top: 2px;
-            background: var(--primary-color);
-            color: #fff;
-            border-radius: 50%;
-            font-size: 12px;
-            font-weight: 500;
-            margin-right: 10px;
         }
 
         .control-group {
@@ -928,6 +917,10 @@
         }
 
         @media (max-width: 1024px) {
+            #container {
+                height: calc(100vh - 40px);
+            }
+
             .main-content {
                 flex-direction: column;
             }
@@ -937,6 +930,7 @@
                 border-right: none;
                 border-bottom: 1px solid var(--border-light);
                 max-height: 60vh;
+                overflow-y: auto;
             }
 
             .preview-panel {
@@ -1105,15 +1099,6 @@
                     "image": [
                         {
                             "@type": "ImageObject",
-                            "contentUrl": "https://wm.infuq.com/images/watermark-effect-preview.png",
-                            "url": "https://wm.infuq.com/images/watermark-effect-preview.png",
-                            "width": 1190,
-                            "height": 402,
-                            "caption": "证件照片批量添加交错平铺的社保专用文字水印效果",
-                            "inLanguage": "zh-CN"
-                        },
-                        {
-                            "@type": "ImageObject",
                             "contentUrl": "https://wm.infuq.com/images/watermark-tool-ui.png",
                             "url": "https://wm.infuq.com/images/watermark-tool-ui.png",
                             "width": 1280,
@@ -1206,7 +1191,6 @@
         <div class="control-panel">
             <div class="step-container">
                 <div class="step-title">
-                    <div class="step-number">1</div>
                     选择图片
                 </div>
                 <div class="control-group">
@@ -1217,7 +1201,6 @@
 
             <div class="step-container">
                 <div class="step-title">
-                    <div class="step-number">2</div>
                     设置水印文字
                 </div>
                 <div class="control-group">
@@ -1229,7 +1212,6 @@
 
             <div class="step-container">
                 <div class="step-title">
-                    <div class="step-number">3</div>
                     调整水印样式
                 </div>
                 
@@ -1362,13 +1344,38 @@
 
 </div>
 
+<!-- 谷歌广告 -->
+<div class="google-ad-footer">
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-6396979438479066"
+         data-ad-slot="4792574865"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+<style>
+    .google-ad-footer {
+        min-height: 0;
+        margin-top: 20px;
+    }
+    ins.adsbygoogle[data-ad-status="unfilled"] {
+        display: none !important;
+    }
+    .google-ad-footer > ins.adsbygoogle:not([data-ad-status]) {
+        height: 0 !important;
+        min-height: 0 !important;
+        overflow: hidden;
+    }
+</style>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 <main class="seo-content">
     <section class="seo-block">
         <h2>图片水印工具: 不上传服务器的批量加水印方案</h2>
         <p>十行图片水印工具是一个纯网页版的图片加水印工具. 图片在浏览器本地读取和绘制, 不发起上传请求, 也不需要注册登录. 给身份证, 银行卡, 合同, 房产资料等敏感照片加"仅供办理XX使用"这类防盗用水印时, 可以避免照片先经过一台陌生服务器.</p>
         <p>打开页面即可使用: 选择一张或多张图片, 输入水印文字, 调整样式, 右侧预览区实时显示效果, 确认后批量下载. 整个流程在同一页面内完成, 不限图片数量与使用次数.</p>
-        <img class="screenshot" src="./images/watermark-effect-preview.png" width="1190" height="402"
-             alt="证件照片批量添加交错平铺的社保专用文字水印效果">
     </section>
 
     <section class="seo-block">
@@ -1919,254 +1926,12 @@
             $("#fontSelect").value = fontOptions[0];
         }
         
-        // 示例身份证绘制工具
-        // 版式参照现行第二代居民身份证: 85.6mm x 54mm, 按 10px/mm 绘制为 856 x 540
-        // 人像面: 照片居左, 登记项目右列, 公民身份号码居底
-        // 国徽面: 国徽左上, 证件名称右上两行同宽, 长城图案居中下, 签发机关与有效期限最下方
-        const ID_W = 856, ID_H = 540, ID_R = 30;
-        const idRoundRect = (ctx, x, y, w, h, r) => {
-            ctx.beginPath();
-            ctx.moveTo(x + r, y);
-            ctx.arcTo(x + w, y, x + w, y + h, r);
-            ctx.arcTo(x + w, y + h, x, y + h, r);
-            ctx.arcTo(x, y + h, x, y, r);
-            ctx.arcTo(x, y, x + w, y, r);
-            ctx.closePath();
-        };
-        const idBase = (ctx) => {
-            // 白色衬底 + 圆角卡面, 导出 JPEG 时不会出现透明黑角
-            ctx.fillStyle = '#ffffff';
-            ctx.fillRect(0, 0, ID_W, ID_H);
-            ctx.save();
-            idRoundRect(ctx, 0, 0, ID_W, ID_H, ID_R);
-            ctx.clip();
-            // 彩虹扭索底纹: 浅蓝 -> 粉红 -> 浅蓝
-            const g = ctx.createLinearGradient(0, 0, ID_W, ID_H);
-            g.addColorStop(0, '#eaf3fb');
-            g.addColorStop(0.5, '#f6eef2');
-            g.addColorStop(1, '#ebf4f9');
-            ctx.fillStyle = g;
-            ctx.fillRect(0, 0, ID_W, ID_H);
-            // 两组相位相反的细曲线交织成扭索网格
-            ctx.lineWidth = 1;
-            for (let i = 0; i < 44; i++) {
-                const y = -16 + i * 13;
-                const tone = i % 3 === 0 ? 'rgba(120, 176, 229, 0.18)'
-                    : i % 3 === 1 ? 'rgba(216, 158, 178, 0.13)' : 'rgba(94, 194, 169, 0.13)';
-                ctx.strokeStyle = tone;
-                for (let dir = 0; dir < 2; dir++) {
-                    ctx.beginPath();
-                    for (let x = 0; x <= ID_W; x += 8) {
-                        const yy = y + 9 * Math.sin((x / ID_W) * Math.PI * 3 + i * 0.35 * (dir ? -1 : 1));
-                        ctx[x === 0 ? 'moveTo' : 'lineTo'](x, yy);
-                    }
-                    ctx.stroke();
-                }
-            }
-            ctx.restore();
-            ctx.strokeStyle = 'rgba(120, 140, 150, 0.45)';
-            ctx.lineWidth = 1.5;
-            idRoundRect(ctx, 0.75, 0.75, ID_W - 1.5, ID_H - 1.5, ID_R);
-            ctx.stroke();
-        };
-        const idLabel = (ctx, t, x, y) => {
-            ctx.fillStyle = '#3d7a68';
-            ctx.font = '22px "Microsoft YaHei", sans-serif';
-            ctx.fillText(t, x, y);
-        };
-        const idValue = (ctx, t, x, y, size) => {
-            ctx.fillStyle = '#26333d';
-            ctx.font = (size || 26) + 'px "Microsoft YaHei", sans-serif';
-            ctx.fillText(t, x, y);
-        };
-        const idNumber = (ctx, t, x, y) => {
-            ctx.fillStyle = '#1f2c36';
-            ctx.font = 'bold 40px "Courier New", monospace';
-            // 逐字加字距, 贴近卡面号码排版
-            let cx = x;
-            for (const ch of t) {
-                ctx.fillText(ch, cx, y);
-                cx += ctx.measureText(ch).width + 4;
-            }
-        };
-        const idMark = (ctx) => {
-            ctx.fillStyle = 'rgba(88, 112, 104, 0.6)';
-            ctx.font = '18px "Microsoft YaHei", sans-serif';
-            ctx.fillText('示例图片, 仅供水印功能演示', ID_W - 244, ID_H - 20);
-        };
-        const idEmblem = (ctx, cx, cy, s) => {
-            // 简化国徽图案(示意, 非精确复刻)
-            ctx.save();
-            ctx.translate(cx, cy);
-            ctx.scale(s, s);
-            ctx.strokeStyle = '#c9a04e';
-            ctx.fillStyle = '#c9a04e';
-            ctx.lineWidth = 3;
-            ctx.beginPath();
-            ctx.arc(0, 10, 46, Math.PI * 1.12, Math.PI * 1.88);
-            ctx.stroke();
-            ctx.beginPath();
-            ctx.arc(0, 10, 46, Math.PI * 0.12, Math.PI * 0.88);
-            ctx.stroke();
-            for (let k = -3; k <= 3; k++) {
-                ctx.beginPath();
-                ctx.arc(k * 14, 52, 3.5, 0, Math.PI * 2);
-                ctx.fill();
-            }
-            ctx.fillStyle = '#d24735';
-            // 天安门: 重檐 + 城身
-            ctx.beginPath();
-            ctx.moveTo(-30, 18);
-            ctx.quadraticCurveTo(0, 6, 30, 18);
-            ctx.lineTo(26, 25);
-            ctx.lineTo(-26, 25);
-            ctx.closePath();
-            ctx.fill();
-            ctx.fillRect(-24, 27, 48, 12);
-            ctx.beginPath();
-            for (let i = 0; i < 10; i++) {
-                const ang = -Math.PI / 2 + i * Math.PI / 5;
-                const rad = i % 2 === 0 ? 22 : 9;
-                ctx[i === 0 ? 'moveTo' : 'lineTo'](rad * Math.cos(ang), -8 + rad * Math.sin(ang));
-            }
-            ctx.closePath();
-            ctx.fill();
-            ctx.restore();
-        };
-        const idWall = (ctx) => {
-            // 简化长城剪影: 远山 + 逐级抬升的城墙垛口 + 右端烽火台
-            ctx.save();
-            ctx.globalAlpha = 0.24;
-            ctx.fillStyle = '#7ba3bd';
-            ctx.beginPath();
-            ctx.moveTo(110, 430);
-            ctx.quadraticCurveTo(210, 336, 300, 396);
-            ctx.quadraticCurveTo(400, 320, 500, 392);
-            ctx.quadraticCurveTo(610, 330, 746, 400);
-            ctx.lineTo(746, 430);
-            ctx.closePath();
-            ctx.fill();
-            ctx.fillStyle = '#4f7f96';
-            const x0 = 110, segW = 128, base = 430;
-            for (let seg = 0; seg < 5; seg++) {
-                const top = 402 - seg * 18;
-                ctx.fillRect(x0 + seg * segW, top, segW + 6, base - top);
-                for (let k = 0; k < 4; k++) {
-                    ctx.fillRect(x0 + seg * segW + k * 34 + 6, top - 14, 20, 14);
-                }
-            }
-            // 烽火台
-            ctx.fillRect(672, 292, 74, 46);
-            for (let k = 0; k < 3; k++) {
-                ctx.fillRect(676 + k * 26, 278, 18, 14);
-            }
-            ctx.restore();
-        };
-
-        // 示例图片1: 张三身份证人像面(照片为剪影, 号码为虚构占位)
-        const drawIdFront = () => {
-            const canvas = document.createElement('canvas');
-            canvas.width = ID_W;
-            canvas.height = ID_H;
-            const ctx = canvas.getContext('2d');
-            idBase(ctx);
-
-            // 证件照片: 剪影占位, 不使用真实人像
-            const px = 78, py = 96, pw = 250, ph = 306;
-            ctx.fillStyle = '#dfeae6';
-            ctx.fillRect(px, py, pw, ph);
-            ctx.save();
-            ctx.beginPath();
-            ctx.rect(px, py, pw, ph);
-            ctx.clip();
-            ctx.fillStyle = '#b3ccc3';
-            ctx.beginPath();
-            ctx.arc(px + pw / 2, py + 108, 62, 0, Math.PI * 2);
-            ctx.fill();
-            ctx.beginPath();
-            ctx.moveTo(px + pw / 2 - 96, py + ph);
-            ctx.quadraticCurveTo(px + pw / 2, py + 196, px + pw / 2 + 96, py + ph);
-            ctx.closePath();
-            ctx.fill();
-            ctx.restore();
-            ctx.strokeStyle = '#a8c3ba';
-            ctx.lineWidth = 2;
-            ctx.strokeRect(px, py, pw, ph);
-
-            idLabel(ctx, '姓名', 372, 150);
-            idValue(ctx, '张三', 448, 150);
-            idLabel(ctx, '性别', 372, 210);
-            idValue(ctx, '男', 448, 210);
-            idLabel(ctx, '民族', 566, 210);
-            idValue(ctx, '汉', 642, 210);
-            idLabel(ctx, '出生', 372, 270);
-            idValue(ctx, '1990年1月1日', 448, 270);
-            idLabel(ctx, '住址', 372, 330);
-            idValue(ctx, '北京市东城区', 448, 330);
-            idValue(ctx, '示例路1号', 448, 378);
-
-            // 公民身份号码: 校验位故意无效, 不能当真实证件使用
-            idLabel(ctx, '公民身份号码', 78, 472);
-            idNumber(ctx, '110101199001011234', 240, 476);
-            idMark(ctx);
-
-            return canvas.toDataURL('image/png');
-        };
-
-        // 示例图片2: 张三身份证国徽面
-        const drawIdBack = () => {
-            const canvas = document.createElement('canvas');
-            canvas.width = ID_W;
-            canvas.height = ID_H;
-            const ctx = canvas.getContext('2d');
-            idBase(ctx);
-
-            idEmblem(ctx, 152, 152, 1.5);
-
-            // 证件名称: 7字与5字两行同宽, 与卡面排版一致
-            ctx.fillStyle = '#2b3a45';
-            ctx.font = 'bold 42px "SimHei", "Microsoft YaHei", sans-serif';
-            ctx.fillText('中华人民共和国', 320, 132);
-            ctx.font = 'bold 58px "SimHei", "Microsoft YaHei", sans-serif';
-            ctx.fillText('居民身份证', 320, 204);
-
-            idWall(ctx);
-
-            idLabel(ctx, '签发机关', 120, 466);
-            idValue(ctx, '北京市公安局东城分局', 240, 466);
-            idLabel(ctx, '有效期限', 120, 508);
-            idValue(ctx, '2015.01.01-2035.01.01', 240, 508);
-            idMark(ctx);
-
-            return canvas.toDataURL('image/png');
-        };
-
-        // 示例图片
-        const exampleImage1 = drawIdFront();
-        const exampleImage2 = drawIdBack();
-        
-        // 将示例添加到文件选择器中
-        const dataUrlToFile = (dataUrl, filename) => {
-            const arr = dataUrl.split(',');
-            const mime = arr[0].match(/:(.*?);/)[1];
-            const bstr = atob(arr[1]);
-            let n = bstr.length;
-            const u8arr = new Uint8Array(n);
-            while(n--){
-                u8arr[n] = bstr.charCodeAt(n);
-            }
-            return new File([u8arr], filename, {type:mime});
-        };
-        
-        // 创建示例文件
-        const file1 = dataUrlToFile(exampleImage1, "张三-身份证人像面.png");
-        const file2 = dataUrlToFile(exampleImage2, "张三-身份证国徽面.png");
-        
-        // 模拟选择示例文件
-        setTimeout(() => {
-            readFile(file1, true);
-            readFile(file2, true);
-        }, 500);
+        // 默认示例图片: 身份证国徽面样张, 与站点一起部署在 images 目录
+        fetch('images/sample-id-card.jpg')
+            .then(res => res.blob())
+            .then(blob => {
+                readFile(new File([blob], '身份证示例.jpg', {type: 'image/jpeg'}), true);
+            });
     });
 
 
